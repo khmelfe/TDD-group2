@@ -1,0 +1,17 @@
+C:\Users\filex\source\repos\TDD\TDD\bin\Debug\net8.0-windows\TDD.exe
+C:\Users\filex\source\repos\TDD\TDD\bin\Debug\net8.0-windows\TDD.deps.json
+C:\Users\filex\source\repos\TDD\TDD\bin\Debug\net8.0-windows\TDD.runtimeconfig.json
+C:\Users\filex\source\repos\TDD\TDD\bin\Debug\net8.0-windows\TDD.dll
+C:\Users\filex\source\repos\TDD\TDD\bin\Debug\net8.0-windows\TDD.pdb
+C:\Users\filex\source\repos\TDD\TDD\obj\Debug\net8.0-windows\TDD.Form1.resources
+C:\Users\filex\source\repos\TDD\TDD\obj\Debug\net8.0-windows\TDD.csproj.GenerateResource.cache
+C:\Users\filex\source\repos\TDD\TDD\obj\Debug\net8.0-windows\TDD.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\filex\source\repos\TDD\TDD\obj\Debug\net8.0-windows\TDD.AssemblyInfoInputs.cache
+C:\Users\filex\source\repos\TDD\TDD\obj\Debug\net8.0-windows\TDD.AssemblyInfo.cs
+C:\Users\filex\source\repos\TDD\TDD\obj\Debug\net8.0-windows\TDD.csproj.CoreCompileInputs.cache
+C:\Users\filex\source\repos\TDD\TDD\obj\Debug\net8.0-windows\TDD.sourcelink.json
+C:\Users\filex\source\repos\TDD\TDD\obj\Debug\net8.0-windows\TDD.dll
+C:\Users\filex\source\repos\TDD\TDD\obj\Debug\net8.0-windows\refint\TDD.dll
+C:\Users\filex\source\repos\TDD\TDD\obj\Debug\net8.0-windows\TDD.pdb
+C:\Users\filex\source\repos\TDD\TDD\obj\Debug\net8.0-windows\TDD.genruntimeconfig.cache
+C:\Users\filex\source\repos\TDD\TDD\obj\Debug\net8.0-windows\ref\TDD.dll
