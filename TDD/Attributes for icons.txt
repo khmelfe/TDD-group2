@@ -1,0 +1,13 @@
+﻿//
+//Icons
+//
+
+Libary icon = <a href="https://www.flaticon.com/free-icons/library" title="library icons">Library icons created by Freepik - Flaticon</a>
+UI Restore window icon = <a target="_blank" href="https://icons8.com/icon/oJZ3AyIYAAo5/restore-window">Restore Window</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+UI minimize icon =<a target="_blank" href="https://icons8.com/icon/axmCGpkXxCV1/minimize-window">Minimize Window</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+UI Exit = <a href="https://www.flaticon.com/free-icons/close" title="close icons">Close icons created by Freepik - Flaticon</a>
+
+//
+//Images
+//
+Library gif = <a href="https://www.freepik.com/free-video/bookshelves-library-with-many-books_473700#fromView=resource_detail&position=0&from_element=related_resources">Video by freepik</a>
