@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TDD.Properties {
+namespace Library.Properties {
     using System;
     
     
