@@ -1,11 +1,19 @@
+using TDD.Controls;
+
 namespace TDD
 {
     public partial class Library : Form
     {
+        Book_list myBookList = GlobalBookList.BookList;
         public Library()
         {
+
             InitializeComponent();
+
+
+
         }
+
 
         public void Exit_button_Click(object sender, EventArgs e)
         {
@@ -19,11 +27,49 @@ namespace TDD
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Books_Click(object sender, EventArgs e)//Insert 10k books button
+        {
+            //Book_list();
+            MessageBox.Show("Hello");
+        }
+        private void Onebook_Click(object sender, EventArgs e)
+        {
+            insert_10k_books1.Hide();
+            insert_onebook1.Show();
+            MessageBox.Show("OneBook");
+
+        }
+
+        private void Insert_onebook_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Open_panel_10k(object sender, EventArgs e)//for button 10k.
+        {
+            insert_onebook1.Hide();
+            insert_10k_books1.Show();
+            MessageBox.Show("10k books");
+
+        }
+
+        private void richTextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void insert_10k_books1_Load(object sender, EventArgs e)
         {
 
         }
     }
 }
+
+
 //trying to commit to master
 //Changing main branch

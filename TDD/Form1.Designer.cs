@@ -30,18 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Library));
             Background_panel = new Panel();
-            panel1 = new Panel();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            Main_page_button = new Button();
+            List_books = new Button();
+            Main_page = new Panel();
+            insert_10k_books1 = new Controls.Insert_10k_books();
+            insert_onebook1 = new Controls.Insert_onebook();
+            sort_list = new Button();
+            Onebook = new Button();
+            Books = new Button();
             richTextBox2 = new RichTextBox();
             richTextBox1 = new RichTextBox();
             pictureBox1 = new PictureBox();
+            Add_book_button = new Button();
             Top_panel = new Panel();
             Minimize_button = new Button();
             Restore_win_button = new Button();
             Exit_button = new Button();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
+            printDocument2 = new System.Drawing.Printing.PrintDocument();
             Background_panel.SuspendLayout();
+            Main_page.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             Top_panel.SuspendLayout();
             SuspendLayout();
@@ -49,54 +57,96 @@
             // Background_panel
             // 
             Background_panel.BackgroundImageLayout = ImageLayout.None;
-            Background_panel.Controls.Add(panel1);
-            Background_panel.Controls.Add(button3);
-            Background_panel.Controls.Add(button2);
-            Background_panel.Controls.Add(button1);
+            Background_panel.Controls.Add(Main_page_button);
+            Background_panel.Controls.Add(List_books);
+            Background_panel.Controls.Add(Main_page);
+            Background_panel.Controls.Add(sort_list);
+            Background_panel.Controls.Add(Onebook);
+            Background_panel.Controls.Add(Books);
             Background_panel.Controls.Add(richTextBox2);
             Background_panel.Controls.Add(richTextBox1);
             Background_panel.Controls.Add(pictureBox1);
+            Background_panel.Controls.Add(Add_book_button);
             Background_panel.Dock = DockStyle.Fill;
             Background_panel.Location = new Point(0, 0);
             Background_panel.Margin = new Padding(1);
             Background_panel.Name = "Background_panel";
-            Background_panel.Size = new Size(858, 521);
+            Background_panel.Size = new Size(1055, 722);
             Background_panel.TabIndex = 0;
             // 
-            // panel1
+            // Main_page_button
             // 
-            panel1.Location = new Point(146, 165);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(700, 353);
-            panel1.TabIndex = 5;
+            Main_page_button.Location = new Point(29, 185);
+            Main_page_button.Name = "Main_page_button";
+            Main_page_button.Size = new Size(111, 89);
+            Main_page_button.TabIndex = 7;
+            Main_page_button.Text = "Main_page";
+            Main_page_button.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // List_books
             // 
-            button3.Location = new Point(29, 294);
-            button3.Name = "button3";
-            button3.Size = new Size(111, 53);
-            button3.TabIndex = 4;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            List_books.Location = new Point(29, 621);
+            List_books.Name = "List_books";
+            List_books.Size = new Size(111, 89);
+            List_books.TabIndex = 6;
+            List_books.Text = "View Books";
+            List_books.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // Main_page
             // 
-            button2.Location = new Point(29, 208);
-            button2.Name = "button2";
-            button2.Size = new Size(111, 53);
-            button2.TabIndex = 3;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            Main_page.BackColor = Color.Transparent;
+            Main_page.Controls.Add(insert_10k_books1);
+            Main_page.Controls.Add(insert_onebook1);
+            Main_page.Location = new Point(146, 165);
+            Main_page.Name = "Main_page";
+            Main_page.Size = new Size(909, 557);
+            Main_page.TabIndex = 5;
             // 
-            // button1
+            // insert_10k_books1
             // 
-            button1.Location = new Point(29, 392);
-            button1.Name = "button1";
-            button1.Size = new Size(111, 53);
-            button1.TabIndex = 2;
-            button1.Text = "Insert 10k books.";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            insert_10k_books1.Location = new Point(-1, 0);
+            insert_10k_books1.Name = "insert_10k_books1";
+            insert_10k_books1.Size = new Size(909, 557);
+            insert_10k_books1.TabIndex = 1;
+            insert_10k_books1.Visible = false;
+            insert_10k_books1.Load += insert_10k_books1_Load;
+            // 
+            // insert_onebook1
+            // 
+            insert_onebook1.Location = new Point(0, 0);
+            insert_onebook1.Name = "insert_onebook1";
+            insert_onebook1.Size = new Size(909, 557);
+            insert_onebook1.TabIndex = 0;
+            insert_onebook1.Visible = false;
+            // 
+            // sort_list
+            // 
+            sort_list.Location = new Point(29, 508);
+            sort_list.Name = "sort_list";
+            sort_list.Size = new Size(111, 89);
+            sort_list.TabIndex = 4;
+            sort_list.Text = "Sort";
+            sort_list.UseVisualStyleBackColor = true;
+            // 
+            // Onebook
+            // 
+            Onebook.Location = new Point(29, 290);
+            Onebook.Name = "Onebook";
+            Onebook.Size = new Size(111, 89);
+            Onebook.TabIndex = 3;
+            Onebook.Text = "Inset one book";
+            Onebook.UseVisualStyleBackColor = true;
+            Onebook.Click += Onebook_Click;
+            // 
+            // Books
+            // 
+            Books.Location = new Point(29, 395);
+            Books.Name = "Books";
+            Books.Size = new Size(111, 89);
+            Books.TabIndex = 2;
+            Books.Text = "Insert 10k books.";
+            Books.UseVisualStyleBackColor = true;
+            Books.Click += Open_panel_10k;
             // 
             // richTextBox2
             // 
@@ -104,7 +154,7 @@
             richTextBox2.BorderStyle = BorderStyle.None;
             richTextBox2.Font = new Font("Arial Narrow", 22.2F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point, 0);
             richTextBox2.ForeColor = Color.White;
-            richTextBox2.Location = new Point(256, 115);
+            richTextBox2.Location = new Point(367, 115);
             richTextBox2.Margin = new Padding(1);
             richTextBox2.Name = "richTextBox2";
             richTextBox2.RightToLeft = RightToLeft.No;
@@ -119,7 +169,7 @@
             richTextBox1.BorderStyle = BorderStyle.None;
             richTextBox1.Font = new Font("Arial Narrow", 25.8F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point, 0);
             richTextBox1.ForeColor = Color.White;
-            richTextBox1.Location = new Point(225, 50);
+            richTextBox1.Location = new Point(339, 47);
             richTextBox1.Margin = new Padding(1);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.RightToLeft = RightToLeft.No;
@@ -135,9 +185,17 @@
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Margin = new Padding(1);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(858, 521);
+            pictureBox1.Size = new Size(1055, 722);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            // 
+            // Add_book_button
+            // 
+            Add_book_button.Location = new Point(-153, 56);
+            Add_book_button.Name = "Add_book_button";
+            Add_book_button.Size = new Size(907, 556);
+            Add_book_button.TabIndex = 24;
+            Add_book_button.Visible = false;
             // 
             // Top_panel
             // 
@@ -149,7 +207,7 @@
             Top_panel.Location = new Point(0, 1);
             Top_panel.Margin = new Padding(1);
             Top_panel.Name = "Top_panel";
-            Top_panel.Size = new Size(856, 44);
+            Top_panel.Size = new Size(1054, 44);
             Top_panel.TabIndex = 1;
             // 
             // Minimize_button
@@ -159,7 +217,7 @@
             Minimize_button.BackgroundImageLayout = ImageLayout.Stretch;
             Minimize_button.FlatStyle = FlatStyle.Popup;
             Minimize_button.ForeColor = Color.Transparent;
-            Minimize_button.Location = new Point(722, -1);
+            Minimize_button.Location = new Point(914, -2);
             Minimize_button.Margin = new Padding(1);
             Minimize_button.Name = "Minimize_button";
             Minimize_button.Size = new Size(45, 45);
@@ -175,7 +233,7 @@
             Restore_win_button.FlatAppearance.BorderSize = 0;
             Restore_win_button.FlatStyle = FlatStyle.Popup;
             Restore_win_button.ImageAlign = ContentAlignment.TopCenter;
-            Restore_win_button.Location = new Point(768, -1);
+            Restore_win_button.Location = new Point(961, 0);
             Restore_win_button.Margin = new Padding(1);
             Restore_win_button.Name = "Restore_win_button";
             Restore_win_button.Size = new Size(45, 45);
@@ -189,7 +247,7 @@
             Exit_button.BackgroundImage = (Image)resources.GetObject("Exit_button.BackgroundImage");
             Exit_button.BackgroundImageLayout = ImageLayout.Stretch;
             Exit_button.FlatStyle = FlatStyle.Popup;
-            Exit_button.Location = new Point(813, -1);
+            Exit_button.Location = new Point(1008, -2);
             Exit_button.Margin = new Padding(1);
             Exit_button.Name = "Exit_button";
             Exit_button.Size = new Size(45, 45);
@@ -201,7 +259,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(858, 521);
+            ClientSize = new Size(1055, 722);
             Controls.Add(Top_panel);
             Controls.Add(Background_panel);
             FormBorderStyle = FormBorderStyle.None;
@@ -210,6 +268,7 @@
             Name = "Library";
             Text = "Library";
             Background_panel.ResumeLayout(false);
+            Main_page.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             Top_panel.ResumeLayout(false);
             ResumeLayout(false);
@@ -225,10 +284,17 @@
         private Button Restore_win_button;
         private Button Exit_button;
         private RichTextBox richTextBox2;
-        private Button button3;
-        private Button button2;
-        private Button button1;
-        private Panel panel1;
+        private Button sort_list;
+        private Button Onebook;
+        private Button Books;
+        private Panel Main_page;
+        private Button List_books;
+        private Button Main_page_button;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Drawing.Printing.PrintDocument printDocument2;
+        private Button Add_book_button;
+        private Controls.Insert_onebook insert_onebook1;
+        private Controls.Insert_10k_books insert_10k_books1;
     }
 }
 
