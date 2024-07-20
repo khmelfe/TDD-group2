@@ -1,4 +1,19 @@
-﻿//using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TDD;
+
+namespace TDD.Tests
+{
+    [TestClass()]
+    public class LibraryTests
+    {
+        [TestMethod()]
+        public void Exit_button_ClickTest()
+        {
+            Assert.Fail();
+        }
+    }
+}
+//using Microsoft.VisualStudio.TestTools.UnitTesting;
 //using TDD;
 //using System;
 //using System.Collections.Generic;

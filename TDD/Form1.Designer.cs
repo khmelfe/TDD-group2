@@ -30,13 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Library));
             Background_panel = new Panel();
+            panel1 = new Panel();
+            button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
+            richTextBox2 = new RichTextBox();
             richTextBox1 = new RichTextBox();
             pictureBox1 = new PictureBox();
             Top_panel = new Panel();
             Minimize_button = new Button();
             Restore_win_button = new Button();
             Exit_button = new Button();
-            richTextBox2 = new RichTextBox();
             Background_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             Top_panel.SuspendLayout();
@@ -45,6 +49,10 @@
             // Background_panel
             // 
             Background_panel.BackgroundImageLayout = ImageLayout.None;
+            Background_panel.Controls.Add(panel1);
+            Background_panel.Controls.Add(button3);
+            Background_panel.Controls.Add(button2);
+            Background_panel.Controls.Add(button1);
             Background_panel.Controls.Add(richTextBox2);
             Background_panel.Controls.Add(richTextBox1);
             Background_panel.Controls.Add(pictureBox1);
@@ -55,13 +63,63 @@
             Background_panel.Size = new Size(858, 521);
             Background_panel.TabIndex = 0;
             // 
+            // panel1
+            // 
+            panel1.Location = new Point(146, 165);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(700, 353);
+            panel1.TabIndex = 5;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(29, 294);
+            button3.Name = "button3";
+            button3.Size = new Size(111, 53);
+            button3.TabIndex = 4;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(29, 208);
+            button2.Name = "button2";
+            button2.Size = new Size(111, 53);
+            button2.TabIndex = 3;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(29, 392);
+            button1.Name = "button1";
+            button1.Size = new Size(111, 53);
+            button1.TabIndex = 2;
+            button1.Text = "Insert 10k books.";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // richTextBox2
+            // 
+            richTextBox2.BackColor = Color.Black;
+            richTextBox2.BorderStyle = BorderStyle.None;
+            richTextBox2.Font = new Font("Arial Narrow", 22.2F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point, 0);
+            richTextBox2.ForeColor = Color.White;
+            richTextBox2.Location = new Point(256, 115);
+            richTextBox2.Margin = new Padding(1);
+            richTextBox2.Name = "richTextBox2";
+            richTextBox2.RightToLeft = RightToLeft.No;
+            richTextBox2.Size = new Size(320, 46);
+            richTextBox2.TabIndex = 2;
+            richTextBox2.Text = "Please choose wisely";
+            richTextBox2.TextChanged += richTextBox2_TextChanged;
+            // 
             // richTextBox1
             // 
             richTextBox1.BackColor = Color.Black;
             richTextBox1.BorderStyle = BorderStyle.None;
             richTextBox1.Font = new Font("Arial Narrow", 25.8F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point, 0);
             richTextBox1.ForeColor = Color.White;
-            richTextBox1.Location = new Point(223, 56);
+            richTextBox1.Location = new Point(225, 50);
             richTextBox1.Margin = new Padding(1);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.RightToLeft = RightToLeft.No;
@@ -139,21 +197,6 @@
             Exit_button.UseVisualStyleBackColor = false;
             Exit_button.Click += Exit_button_Click;
             // 
-            // richTextBox2
-            // 
-            richTextBox2.BackColor = Color.Black;
-            richTextBox2.BorderStyle = BorderStyle.None;
-            richTextBox2.Font = new Font("Arial Narrow", 22.2F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point, 0);
-            richTextBox2.ForeColor = Color.White;
-            richTextBox2.Location = new Point(256, 115);
-            richTextBox2.Margin = new Padding(1);
-            richTextBox2.Name = "richTextBox2";
-            richTextBox2.RightToLeft = RightToLeft.No;
-            richTextBox2.Size = new Size(320, 46);
-            richTextBox2.TabIndex = 2;
-            richTextBox2.Text = "Please choose wisely";
-            richTextBox2.TextChanged += richTextBox2_TextChanged;
-            // 
             // Library
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -182,6 +225,10 @@
         private Button Restore_win_button;
         private Button Exit_button;
         private RichTextBox richTextBox2;
+        private Button button3;
+        private Button button2;
+        private Button button1;
+        private Panel panel1;
     }
 }
 
