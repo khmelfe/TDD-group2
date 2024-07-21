@@ -35,7 +35,7 @@ namespace TDD
         private bool IsValid(string title) // will check that the title is only letters.
         {
             // Regex pattern to match only letters,checks if there is at least one letter ,and end to the string,and only english letters.
-            var pattern = @"^[A-Za-z]+$";
+            var pattern = @"^[A-Za-z\s]+$";
             return Regex.IsMatch(title, pattern);
         }
        
@@ -96,7 +96,10 @@ namespace TDD
         public string getBook_name() { return this.Book_name; }
         public string getBook_author() { return this.Book_author; }
         public int getBook_release() { return this.Book_release; }
-        public Category BookCategory { get; }
+        public Category BookCategory
+        {
+            get { return Book_Category; }
+        }
         public bool getIsBorrowed() { return this.IsBorrowed;}
         
     }

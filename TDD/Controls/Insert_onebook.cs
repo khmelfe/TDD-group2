@@ -85,15 +85,19 @@ namespace TDD.Controls
                 int book_release_num = int.Parse(book_release);
                 int ISBN_NUM = int.Parse(ISBN);
 
-                string message = $"ISBN: {ISBN_NUM}\nBook Name: {Bookname}\nAuthor: {Book_author}\nRelease Year: {book_release_num}\n" +
-                    $"Catogory: {selectedCatogory}\nStatus {selectedstaus}";//getting all the things.
-                MessageBox.Show(message, "Book Details:", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 Category name = Getcategory(selectedCatogory);
 
 
                 Book new_book = new Book(ISBN_NUM, Bookname, Book_author, book_release_num, name, Borrowed);
                 booklist.addbook(new_book);//adding to the list.
+                string message = $"ISBN: {ISBN_NUM}\nBook Name: {Bookname}\nAuthor: {Book_author}\nRelease Year: {book_release_num}\n" +
+                    $"Catogory: {selectedCatogory}\nStatus {selectedstaus}";//getting all the things.
+                MessageBox.Show(message, "Book Details:", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (InvalidOperationException ex)
+            {
+                // Show a message box with the exception message
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (ArgumentNullException ex)
             {
@@ -107,6 +111,7 @@ namespace TDD.Controls
             {
                 MessageBox.Show("please check Book release number and ISBN number and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
 
         }
 

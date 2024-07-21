@@ -24,23 +24,28 @@ namespace TDD
         /// <summary>
         /// Methods.
         /// </summary>
-       
+
         public void addbook(Book book)
         {
-            int already_in_library_flag=0;
-            for(int i = 0; i < size_list; i++)
-            {
-                if(already_in_library_flag == 1)
+            
+
+                for (int i = 0; i < size_list; i++)
                 {
-                    throw new InvalidOperationException("The book you try to add is already in the library.please enter new isbn");
-                    
+
+                    if (book_list[i].getISBN() == book.getISBN())
+                    {
+                        throw new InvalidOperationException("The book you try to add is already in the library\n.please enter new ISBN");
+
+                    }
                 }
-            }
-            if(book_list.Length == size_list)
-            { resize_list(); }
-            book_list[size_list] = book;
-            size_list++;
+                if (book_list.Length == size_list)
+                { resize_list(); }
+                book_list[size_list] = book;
+                size_list++;
+                
+            
         }
+            
         public void resize_list()
         {
             int newsize = book_list.Length + 1;
@@ -81,7 +86,10 @@ namespace TDD
         {
             return this.size_list;
         }
-        
+        public void setBookList(Book[] newlist)
+        {
+            this.book_list=newlist;
+        }
 
 
     }

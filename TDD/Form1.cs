@@ -1,3 +1,4 @@
+using System.Windows.Forms;
 using TDD.Controls;
 
 namespace TDD
@@ -9,7 +10,9 @@ namespace TDD
         {
 
             InitializeComponent();
-
+            insert_10k_books1.Hide();
+            insert_onebook1.Hide();
+            view_books1.Hide();
 
 
         }
@@ -34,6 +37,7 @@ namespace TDD
         }
         private void Onebook_Click(object sender, EventArgs e)
         {
+            view_books1.Hide();
             insert_10k_books1.Hide();
             insert_onebook1.Show();
             MessageBox.Show("OneBook");
@@ -47,6 +51,7 @@ namespace TDD
 
         private void Open_panel_10k(object sender, EventArgs e)//for button 10k.
         {
+            view_books1.Hide();
             insert_onebook1.Hide();
             insert_10k_books1.Show();
             MessageBox.Show("10k books");
@@ -67,6 +72,15 @@ namespace TDD
         {
 
         }
+
+        private void List_books_Click(object sender, EventArgs e)
+        {
+            insert_10k_books1.Hide();
+            insert_onebook1.Hide();
+            view_books1.Show();
+
+        }
+       
     }
 }
 
