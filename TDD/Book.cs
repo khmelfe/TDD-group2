@@ -45,13 +45,17 @@ namespace TDD
             {
                 if (iSBN > 0 ) {this.ISBN = iSBN;}
                 else
-                {  throw new ArgumentOutOfRangeException(nameof(ISBN), "ISBN must be between Postive."); }/*wrong input.*/
+                {  throw new ArgumentOutOfRangeException(nameof(ISBN), "ISBN must be between Postive.");
+
+                }/*wrong input.*/
                 //
                 //
                 if (IsValid(book_name))// checks if a book is only letters.
                     this.Book_name = book_name;
                 else
-                {throw new ArgumentException("Books can only be letters,please try again.");}//wrong input.
+                {
+                    
+                    throw new ArgumentException("Books can only be letters,please try again.");}//wrong input.
                 //
                 //
                 if (IsValid(book_author)) { this.Book_author = book_author; }
@@ -70,15 +74,17 @@ namespace TDD
 
             catch (ArgumentOutOfRangeException ex)
             {
-                Console.WriteLine(ex.Message); // Handle.
+                MessageBox.Show(ex.Message, "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;// Handle.
             }
             catch (ArgumentException ex)
             {
-                Console.WriteLine(ex.Message); // Handle
+                MessageBox.Show(ex.Message, "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error); return; // Handle
             }
             catch (Exception ex)
             {
-                Console.WriteLine("An unexpected error occurred: " + ex.Message); // Handle anything else.
+                MessageBox.Show("An unexpected error occurred: " + ex.Message, "Unexpected Error", MessageBoxButtons.OK, MessageBoxIcon.Error);// Handle anything else.
+                return;
             }
         }
 

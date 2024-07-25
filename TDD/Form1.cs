@@ -15,7 +15,9 @@ namespace TDD
             view_books1.Hide();
 
 
+
         }
+
 
 
         public void Exit_button_Click(object sender, EventArgs e)
@@ -40,7 +42,7 @@ namespace TDD
             view_books1.Hide();
             insert_10k_books1.Hide();
             insert_onebook1.Show();
-            MessageBox.Show("OneBook");
+            //MessageBox.Show("OneBook");
 
         }
 
@@ -79,8 +81,19 @@ namespace TDD
             insert_onebook1.Hide();
             view_books1.Show();
 
+
+
         }
-       
+
+        private void view_books1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void view_books1_Load_1(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
 

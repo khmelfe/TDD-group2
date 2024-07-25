@@ -35,11 +35,9 @@ namespace TDD.Controls
             string[] book_auth = { "Mark Lawrence", "Julia Child ", "Alex Prud homme", "Jonathan Kozol", "Lauren Kate" };
 
             int counter = 0;
-
             for (; counter < 10000; counter++)
             {
-                
-                //bool not_unieque = true;//will be set false if there is not a unieque isbn numb.
+   
                 while (counter < 10000)
                 {
                     bool flag_same_isbn = false;
@@ -77,9 +75,11 @@ namespace TDD.Controls
             if (!checkrandom(booklist))
                 MessageBox.Show("Failed to randomisze,please try again");
             else
-                
-                MessageBox.Show("Success in making random");
-        }
+            {
+                int size_lists = booklist.getSize();
+                MessageBox.Show("Success in making random,Book_list size is: " + size_lists);
+            }
+            }
 
         private bool checkrandom(Book_list booklist)
         {
