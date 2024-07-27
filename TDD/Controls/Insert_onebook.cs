@@ -58,6 +58,7 @@ namespace TDD.Controls
             
             try
             {
+                
                 //ISBN,Book_name,Book_AUTHOR,book_release,Catgorybook,isborrowed.
                 string ISBN = Text_ISBN.Texts;
                 string Bookname = Text_Book_name.Texts;
@@ -97,10 +98,11 @@ namespace TDD.Controls
                         string message = $"ISBN: {ISBN_NUM}\nBook Name: {Bookname}\nAuthor: {Book_author}\nRelease Year: {book_release_num}\n" +
                             $"Catogory: {selectedCatogory}\nStatus {selectedstaus}";//getting all the things.
                         MessageBox.Show(message, "Book Details:", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Text_ISBN.Text = "";
-                        Text_Book_name.Text = "";
-                        Text_Book_author.Text = "";
-                        Text_book_release.Text = "";
+                        //Clearing the fiels.
+                        Text_ISBN.Texts = "";
+                        Text_Book_name.Texts = "";
+                        Text_Book_author.Texts = "";
+                        Text_book_release.Texts = "";
                         Catogory_select.SelectedIndex = -1;
                         Borrowedstatus.SelectedIndex = -1;
                     }

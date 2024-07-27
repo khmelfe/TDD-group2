@@ -42,6 +42,9 @@
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
+            progressBar1 = new ProgressBar();
+            label1 = new Label();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -196,10 +199,32 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(724, 60);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(125, 29);
+            progressBar1.TabIndex = 19;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(724, 28);
+            label1.Name = "label1";
+            label1.Size = new Size(89, 20);
+            label1.TabIndex = 20;
+            label1.Text = "Loading bar";
+            // 
+            // backgroundWorker1
+            // 
+            backgroundWorker1.DoWork += backgroundWorker1_DoWork_1;
+            // 
             // View_books
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label1);
+            Controls.Add(progressBar1);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -212,6 +237,7 @@
             Size = new Size(909, 557);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -229,5 +255,8 @@
         private DataGridViewTextBoxColumn Book_name_Column;
         private DataGridViewTextBoxColumn Book_Author_Column;
         private DataGridViewTextBoxColumn Category_Column;
+        private ProgressBar progressBar1;
+        private Label label1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

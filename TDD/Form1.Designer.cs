@@ -44,7 +44,6 @@
             Add_book_button = new Button();
             Top_panel = new Panel();
             Minimize_button = new Button();
-            Restore_win_button = new Button();
             Exit_button = new Button();
             printDocument1 = new System.Drawing.Printing.PrintDocument();
             printDocument2 = new System.Drawing.Printing.PrintDocument();
@@ -204,7 +203,6 @@
             // 
             Top_panel.BackColor = Color.Black;
             Top_panel.Controls.Add(Minimize_button);
-            Top_panel.Controls.Add(Restore_win_button);
             Top_panel.Controls.Add(Exit_button);
             Top_panel.ForeColor = Color.CornflowerBlue;
             Top_panel.Location = new Point(0, 1);
@@ -220,29 +218,13 @@
             Minimize_button.BackgroundImageLayout = ImageLayout.Stretch;
             Minimize_button.FlatStyle = FlatStyle.Popup;
             Minimize_button.ForeColor = Color.Transparent;
-            Minimize_button.Location = new Point(914, -2);
+            Minimize_button.Location = new Point(961, -1);
             Minimize_button.Margin = new Padding(1);
             Minimize_button.Name = "Minimize_button";
             Minimize_button.Size = new Size(45, 45);
             Minimize_button.TabIndex = 2;
             Minimize_button.UseVisualStyleBackColor = false;
-            // 
-            // Restore_win_button
-            // 
-            Restore_win_button.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            Restore_win_button.BackColor = Color.White;
-            Restore_win_button.BackgroundImage = (Image)resources.GetObject("Restore_win_button.BackgroundImage");
-            Restore_win_button.BackgroundImageLayout = ImageLayout.Zoom;
-            Restore_win_button.FlatAppearance.BorderSize = 0;
-            Restore_win_button.FlatStyle = FlatStyle.Popup;
-            Restore_win_button.ImageAlign = ContentAlignment.TopCenter;
-            Restore_win_button.Location = new Point(961, 0);
-            Restore_win_button.Margin = new Padding(1);
-            Restore_win_button.Name = "Restore_win_button";
-            Restore_win_button.Size = new Size(45, 45);
-            Restore_win_button.TabIndex = 1;
-            Restore_win_button.TextAlign = ContentAlignment.MiddleRight;
-            Restore_win_button.UseVisualStyleBackColor = false;
+            Minimize_button.Click += Minimize_button_Click;
             // 
             // Exit_button
             // 
@@ -284,7 +266,6 @@
         private Panel Top_panel;
         private RichTextBox richTextBox1;
         private Button Minimize_button;
-        private Button Restore_win_button;
         private Button Exit_button;
         private RichTextBox richTextBox2;
         private Button Onebook;

@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.ComponentModel;
+
 
 namespace TDD.Controls
 {
@@ -23,9 +26,16 @@ namespace TDD.Controls
             InitializeComponent();
 
             dataGridView1.Show();
+            backgroundWorker1.DoWork += new DoWorkEventHandler(backgroundWorker1_DoWork);
+            backgroundWorker1.ProgressChanged += new ProgressChangedEventHandler(backgroundWorker1_ProgressChanged);
+            backgroundWorker1.RunWorkerCompleted += new RunWorkerCompletedEventHandler(backgroundWorker1_RunWorkerCompleted);
+            backgroundWorker1.WorkerReportsProgress = true;
+            backgroundWorker1.WorkerSupportsCancellation = true;
+
 
 
         }
+
 
 
 
@@ -77,26 +87,57 @@ namespace TDD.Controls
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-                //making sort,and checking how much it took.
-                DateTime startTime = DateTime.Now;
-                booklist.Bubble_Sort();//code to check.
-                DateTime endTime = DateTime.Now;
-                TimeSpan elapsed = endTime - startTime;
-                MessageBox.Show("Finished Bubble_Sort in :" + elapsed);
+
+            progressBar1.Value = 0;
+            dataGridView1.Rows.Clear();
+            //Starts the function for sort
+            backgroundWorker1.RunWorkerAsync();
+           
+        }
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            //making sort,and checking how much it took.
+            DateTime startTime = DateTime.Now;
+            booklist.Bubble_Sort();//code to check.
+            DateTime endTime = DateTime.Now;
+            TimeSpan elapsed = endTime - startTime;
+            MessageBox.Show("Finished Bubble_Sort in :" + elapsed,"\nPlease Wait to the bar to Finish before looking.");
+            backgroundWorker1.ReportProgress(0);
 
 
-                //Loading the list to the view.
-                Book[] listbook = booklist.getALL();
-                for (int i = 0; i < booklist.getSize(); i++)
+            //Loading the list to the view.
+            Book[] listbook = booklist.getALL();
+            int totalBooks = booklist.getSize();
+            for (int i = 0; i < booklist.getSize(); i++)
+            {
+                int isbn = listbook[i].getISBN();
+
+                int progressPercentage = (i * 100) / totalBooks;
+                backgroundWorker1.ReportProgress(progressPercentage);
+
+                Invoke(new Action(() =>
                 {
-                    int isbn = listbook[i].getISBN();
-                    
-                        //isbnSet.Add(isbn);
-                        dataGridView1.Rows.Add(listbook[i].getISBN(), listbook[i].getBook_name(), listbook[i].getBook_author(), listbook[i].getBook_release(),
-                            listbook[i].BookCategory.ToString(), listbook[i].getIsBorrowed());
-                    
-                }
+                    //isbnSet.Add(isbn);
+                    dataGridView1.Rows.Add(listbook[i].getISBN(), listbook[i].getBook_name(), listbook[i].getBook_author(), listbook[i].getBook_release(),
+                        listbook[i].BookCategory.ToString(), listbook[i].getIsBorrowed());
+                }));
+            }
+            backgroundWorker1.ReportProgress(100);
+        }
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar1.Value = e.ProgressPercentage;
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            MessageBox.Show("Finished processing!");
+
+        }
+
+        private void backgroundWorker1_DoWork_1(object sender, DoWorkEventArgs e)
+        {
+
         }
     }
 }

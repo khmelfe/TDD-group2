@@ -55,16 +55,16 @@ namespace TDD
                 else
                 {
                     
-                    throw new ArgumentException("Books can only be letters,please try again.");}//wrong input.
+                    throw new ArgumentException("Books can only be letters\n please try again.");}//wrong input.
                 //
                 //
                 if (IsValid(book_author)) { this.Book_author = book_author; }
-                else { throw new ArgumentException("Authors can only be letters,please try again."); }
+                else { throw new ArgumentException("Authors can only be letters\n please try again."); }
                 //
                 //
 
                 if(book_release >=1900 && book_release <= 2023) { this.Book_release= book_release; }
-                else { throw new ArgumentOutOfRangeException(nameof(Book_release), "Book_release must be between 1900 and 20230,please try again."); }
+                else { throw new ArgumentOutOfRangeException(nameof(Book_release), "Book_release must be between 1900 and 2023\n please try again."); }
                 //
                 //
                 this.Book_Category = Book_Category;

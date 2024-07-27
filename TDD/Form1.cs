@@ -92,7 +92,20 @@ namespace TDD
 
         private void view_books1_Load_1(object sender, EventArgs e)
         {
-            
+
+        }
+        private void Minimize_button_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Normal;
+
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Minimized;
+
+            }
         }
     }
 }

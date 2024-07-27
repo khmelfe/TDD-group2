@@ -54,13 +54,21 @@ namespace TDD
         }
         public double average_release()//getting the average of the book releasese.
         {
-            int sum = 0;
-            for(int i = 0; i < size_list; i++)
+            if (book_list.Length > 0)
             {
-                sum += book_list[i].getBook_release();
+                int sum = 0;
+                for (int i = 0; i < size_list; i++)
+                {
+                    sum += book_list[i].getBook_release();
+                }
+                if (sum == 0) { return 0; } //making sure that we won't divive by zero.
+                else { return (sum / size_list); }
             }
-            if(sum == 0) { return 0; } //making sure that we won't divive by zero.
-            else { return (sum / size_list); }
+            else
+            {
+                MessageBox.Show("booklist is empty..");
+                return 0;
+            }
             
         }
         public int amount_avalible()

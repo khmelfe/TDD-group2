@@ -60,10 +60,11 @@ namespace TDD.Tests
             Book_list bookstest = new Book_list();
             Book temp = null;
 
-            
+
             Book[] Book_lists = bookstest.getALL();//getting the array of the list
 
-            if (Book_lists.Length != 0) {
+            if (Book_lists.Length != 0)
+            {
                 for (int i = 0; i < bookstest.getSize(); i++)
                 {
                     for (int j = 0; j < bookstest.getSize() - i - 1; j++)
@@ -79,9 +80,34 @@ namespace TDD.Tests
                 bookstest.setBookList(Book_lists);
             }
             //assert
-            Assert.AreEqual(Book_lists.Length,0);
-           
+            Assert.AreEqual(Book_lists.Length, 0);
+
         }
+
+        [TestMethod()]
+        //testing avg releasesort
+        public void average_releaseSort_Tests()
+        {
+            //Arrange
+            Book_list bookstest = new Book_list();
+            Book[] empty = new Book[0];
+            bookstest.setBookList(empty);
+
+
+            int sum = 0;
+            if (bookstest.getSize() > 0)
+            {
+                for (int i = 0; i < bookstest.getSize(); i++)
+                {
+                    sum += empty[i].getBook_release();
+                }
+                //if (sum == 0) { return 0; } //making sure that we won't divive by zero.
+                //else { return (sum / bookstest.getSize()); }
+            }
+
+            Assert.AreEqual(sum,0);
+        }
+       
     }
 }
 
