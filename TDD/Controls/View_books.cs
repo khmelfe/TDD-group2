@@ -35,10 +35,9 @@ namespace TDD.Controls
 
 
 
+
+
         }
-
-
-
 
         private void richTextBox4_TextChanged(object sender, EventArgs e)
         {
@@ -67,7 +66,6 @@ namespace TDD.Controls
             }
 
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             int size = booklist.getSize();
@@ -93,16 +91,16 @@ namespace TDD.Controls
             dataGridView1.Rows.Clear();
             //Starts the function for sort
             backgroundWorker1.RunWorkerAsync();
-           
+
         }
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             //making sort,and checking how much it took.
             DateTime startTime = DateTime.Now;
-            booklist.Bubble_Sort();//code to check.
+            booklist.Sort();//code to check.
             DateTime endTime = DateTime.Now;
             TimeSpan elapsed = endTime - startTime;
-            MessageBox.Show("Finished Bubble_Sort in :" + elapsed,"\nPlease Wait to the bar to Finish before looking.");
+            MessageBox.Show("Finished Sort in :" + elapsed, "\nPlease Wait to the bar to Finish before looking.");
             backgroundWorker1.ReportProgress(0);
 
 
@@ -140,6 +138,13 @@ namespace TDD.Controls
         {
 
         }
+
+        private void View_books_Load(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
 

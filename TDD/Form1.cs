@@ -13,6 +13,8 @@ namespace TDD
             insert_10k_books1.Hide();
             insert_onebook1.Hide();
             view_books1.Hide();
+            main_page1.Show();
+
 
 
 
@@ -41,6 +43,7 @@ namespace TDD
         {
             view_books1.Hide();
             insert_10k_books1.Hide();
+            main_page1.Hide();
             insert_onebook1.Show();
             //MessageBox.Show("OneBook");
 
@@ -55,8 +58,9 @@ namespace TDD
         {
             view_books1.Hide();
             insert_onebook1.Hide();
+            main_page1.Hide();
             insert_10k_books1.Show();
-            MessageBox.Show("10k books");
+            //MessageBox.Show("10k books");
 
         }
 
@@ -79,6 +83,7 @@ namespace TDD
         {
             insert_10k_books1.Hide();
             insert_onebook1.Hide();
+            main_page1.Hide();
             view_books1.Show();
 
 
@@ -106,6 +111,20 @@ namespace TDD
                 this.WindowState = FormWindowState.Minimized;
 
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Main_page_button_Click(object sender, EventArgs e)
+        {
+            insert_10k_books1.Hide();
+            insert_onebook1.Hide();
+            view_books1.Hide();
+            main_page1.Show();
+
         }
     }
 }

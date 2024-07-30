@@ -27,24 +27,25 @@ namespace TDD
 
         public void addbook(Book book)
         {
-            
-                for (int i = 0; i < size_list; i++)
+
+            for (int i = 0; i < size_list; i++)
+            {
+
+                if (book_list[i].getISBN() == book.getISBN())
                 {
+                    throw new InvalidOperationException("The book you try to add is already in the library\n.please enter new ISBN");
 
-                    if (book_list[i].getISBN() == book.getISBN())
-                    {
-                        throw new InvalidOperationException("The book you try to add is already in the library\n.please enter new ISBN");
+                }
+            }
+            if (book_list.Length == size_list)//take down if, because it always true.
+            {
+                resize_list();
+            }
+            book_list[size_list] = book;
+            size_list++;
 
-                    }
-                }
-                if (book_list.Length == size_list)//take down if, because it always true.
-                { resize_list();
-                }
-                book_list[size_list] = book;
-                size_list++;
-          
         }
-       
+
         public void resize_list()
         {
             int newsize = book_list.Length + 1;
@@ -69,7 +70,7 @@ namespace TDD
                 MessageBox.Show("booklist is empty..");
                 return 0;
             }
-            
+
         }
         public int amount_avalible()
         {
@@ -79,7 +80,7 @@ namespace TDD
                     amount_avalible = amount_avalible + 1;
             return amount_avalible;
         }
-        
+
         /// <summary>
         /// getters !.
         /// </summary>
@@ -89,42 +90,85 @@ namespace TDD
             Book[] allofthem = new Book[this.size_list];
             Array.Copy(book_list, allofthem, size_list);
             return allofthem;
-        } 
-        
+        }
+
         public int getSize()
         {
             return this.size_list;
         }
         public void setBookList(Book[] newlist)
         {
-            this.book_list=newlist;
+            this.book_list = newlist;
         }
-        public void Bubble_Sort()
+
+        public void Sort()
         {
-
-            //ver 1.4 //fixing logic.
-            Book temp = null;
-
+            //Ver 1.5 - sort , better then bubble sort
             if (this.book_list.Length != 0)
             {
-                for (int i = 0; i < this.book_list.Length; i++)
+                QuickSort(book_list, 0, book_list.Length - 1);
+            }
+            else { MessageBox.Show("Book list is empty.."); }
+        }
+
+        public void QuickSort(Book[] books, int low, int high)
+        {
+            if (low < high)
+            {
+                int pivotIndex = Partition(books, low, high);
+                QuickSort(books, low, pivotIndex - 1);
+                QuickSort(books, pivotIndex + 1, high);
+            }
+        }
+
+        public int Partition(Book[] books, int low, int high)
+        {
+            Book pivot = books[high];
+            int i = low - 1;
+
+            for (int j = low; j < high; j++)
+            {
+                if (books[j].getBook_release() > books[high].getBook_release())
                 {
-                    for (int j = 0; j < this.book_list.Length - i - 1; j++)
-                    {
-                        if (this.book_list[j].getBook_release() > this.book_list[j+1].getBook_release())
-                        {
-                            temp = this.book_list[j];
-                            this.book_list[j] = this.book_list[j + 1];
-                            this.book_list[j + 1] = temp;
-                        }
-                    }
-                    
+                    i++;
+                    Book temp = books[i];
+                    books[i] = books[j];
+                    books[j] = temp;
                 }
             }
-            else
-            {
-                MessageBox.Show("Book list is empty..");
-            }
+
+            Book temp1 = books[i + 1];
+            books[i + 1] = books[high];
+            books[high] = temp1;
+
+            return i + 1;
+        }
+    }
+}
+              
+ ////ver 1.4 -bubble sort
+            //Book temp = null;
+
+            //if (this.book_list.Length != 0)
+            //{
+            //    for (int i = 0; i < this.book_list.Length; i++)
+            //    {
+            //        for (int j = 0; j < this.book_list.Length - i - 1; j++)
+            //        {
+            //            if (this.book_list[j].getBook_release() < this.book_list[j+1].getBook_release())
+            //            {
+            //                temp = this.book_list[j];
+            //                this.book_list[j] = this.book_list[j + 1];
+            //                this.book_list[j + 1] = temp;
+            //            }
+            //        }
+                    
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Book list is empty..");
+            //}
 
 
             //last ver 1.3, fixed the sort itself(didn't work),added a check to see first if the booklist isn't empthy.
@@ -177,8 +221,3 @@ namespace TDD
             //        }
             //    }
             //}
-        }
-
-
-    }
-}

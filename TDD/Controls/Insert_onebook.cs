@@ -53,7 +53,7 @@ namespace TDD.Controls
         {
 
         }
-        private void Add_book_button_Click(object sender, EventArgs e)
+        public void Add_book_button_Click(object sender, EventArgs e)
         {
             
             try

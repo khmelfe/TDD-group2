@@ -20,7 +20,7 @@ namespace TDD.Controls
             InitializeComponent();
         }
 
-        private void Random_books_Click(object sender, EventArgs e)
+        public void Random_books_Click(object sender, EventArgs e)
         {
             
             //Isbn,name_book,name_author,book_release,catagory,status.
