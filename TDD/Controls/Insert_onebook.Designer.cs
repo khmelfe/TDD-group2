@@ -66,8 +66,9 @@
             panel1.Controls.Add(Add_book_button);
             panel1.Controls.Add(Text_ISBN);
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(6);
             panel1.Name = "panel1";
-            panel1.Size = new Size(909, 557);
+            panel1.Size = new Size(1929, 1140);
             panel1.TabIndex = 8;
             // 
             // Catogory_select
@@ -77,63 +78,70 @@
             Catogory_select.ForeColor = SystemColors.HotTrack;
             Catogory_select.FormattingEnabled = true;
             Catogory_select.Items.AddRange(new object[] { "Fantasy", "Historical fiction", "Thriller", "Romance", "Science fiction" });
-            Catogory_select.Location = new Point(479, 348);
+            Catogory_select.Location = new Point(1018, 713);
+            Catogory_select.Margin = new Padding(6);
             Catogory_select.Name = "Catogory_select";
-            Catogory_select.Size = new Size(312, 36);
+            Catogory_select.Size = new Size(658, 62);
             Catogory_select.TabIndex = 22;
             Catogory_select.SelectedIndexChanged += Catogory_select_SelectedIndexChanged;
             // 
             // label6
             // 
             label6.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(132, 410);
+            label6.Location = new Point(280, 840);
+            label6.Margin = new Padding(6, 0, 6, 0);
             label6.Name = "label6";
-            label6.Size = new Size(219, 43);
+            label6.Size = new Size(465, 88);
             label6.TabIndex = 21;
             label6.Text = "Is borrowed?";
             // 
             // label5
             // 
             label5.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(132, 348);
+            label5.Location = new Point(280, 713);
+            label5.Margin = new Padding(6, 0, 6, 0);
             label5.Name = "label5";
-            label5.Size = new Size(219, 43);
+            label5.Size = new Size(465, 88);
             label5.TabIndex = 20;
             label5.Text = "Enter Catogory";
             // 
             // label4
             // 
             label4.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(132, 288);
+            label4.Location = new Point(280, 590);
+            label4.Margin = new Padding(6, 0, 6, 0);
             label4.Name = "label4";
-            label4.Size = new Size(219, 43);
+            label4.Size = new Size(465, 88);
             label4.TabIndex = 19;
             label4.Text = "Enter book release";
             // 
             // label3
             // 
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(132, 229);
+            label3.Location = new Point(280, 469);
+            label3.Margin = new Padding(6, 0, 6, 0);
             label3.Name = "label3";
-            label3.Size = new Size(219, 43);
+            label3.Size = new Size(465, 88);
             label3.TabIndex = 18;
             label3.Text = "enter Book author";
             // 
             // label2
             // 
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(132, 169);
+            label2.Location = new Point(280, 346);
+            label2.Margin = new Padding(6, 0, 6, 0);
             label2.Name = "label2";
-            label2.Size = new Size(219, 43);
+            label2.Size = new Size(465, 88);
             label2.TabIndex = 17;
             label2.Text = "enter Book name";
             // 
             // label1
             // 
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(132, 107);
+            label1.Location = new Point(280, 219);
+            label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(219, 43);
+            label1.Size = new Size(465, 88);
             label1.TabIndex = 16;
             label1.Text = "enter ISBN";
             // 
@@ -145,9 +153,10 @@
             Borrowedstatus.ForeColor = SystemColors.HotTrack;
             Borrowedstatus.FormattingEnabled = true;
             Borrowedstatus.Items.AddRange(new object[] { "Yes", "No" });
-            Borrowedstatus.Location = new Point(561, 416);
+            Borrowedstatus.Location = new Point(1192, 853);
+            Borrowedstatus.Margin = new Padding(6);
             Borrowedstatus.Name = "Borrowedstatus";
-            Borrowedstatus.Size = new Size(147, 36);
+            Borrowedstatus.Size = new Size(308, 62);
             Borrowedstatus.TabIndex = 15;
             Borrowedstatus.SelectedIndexChanged += Borrowedstatus_SelectedIndexChanged;
             // 
@@ -159,12 +168,13 @@
             Text_book_release.Bordersize = 2;
             Text_book_release.Font = new Font("Segoe UI", 12F);
             Text_book_release.ForeColor = Color.DimGray;
-            Text_book_release.Location = new Point(479, 282);
+            Text_book_release.Location = new Point(1018, 578);
+            Text_book_release.Margin = new Padding(6);
             Text_book_release.Multline = false;
             Text_book_release.Name = "Text_book_release";
-            Text_book_release.Padding = new Padding(7);
+            Text_book_release.Padding = new Padding(15, 14, 15, 14);
             Text_book_release.PasswordChar = false;
-            Text_book_release.Size = new Size(312, 43);
+            Text_book_release.Size = new Size(663, 83);
             Text_book_release.TabIndex = 13;
             Text_book_release.Texts = "";
             Text_book_release.UnderlinedStyle = true;
@@ -178,12 +188,13 @@
             Text_Book_author.Bordersize = 2;
             Text_Book_author.Font = new Font("Segoe UI", 12F);
             Text_Book_author.ForeColor = Color.DimGray;
-            Text_Book_author.Location = new Point(479, 223);
+            Text_Book_author.Location = new Point(1018, 457);
+            Text_Book_author.Margin = new Padding(6);
             Text_Book_author.Multline = false;
             Text_Book_author.Name = "Text_Book_author";
-            Text_Book_author.Padding = new Padding(7);
+            Text_Book_author.Padding = new Padding(15, 14, 15, 14);
             Text_Book_author.PasswordChar = false;
-            Text_Book_author.Size = new Size(312, 43);
+            Text_Book_author.Size = new Size(663, 83);
             Text_Book_author.TabIndex = 12;
             Text_Book_author.Texts = "";
             Text_Book_author.UnderlinedStyle = true;
@@ -197,12 +208,13 @@
             Text_Book_name.Bordersize = 2;
             Text_Book_name.Font = new Font("Segoe UI", 12F);
             Text_Book_name.ForeColor = Color.DimGray;
-            Text_Book_name.Location = new Point(479, 163);
+            Text_Book_name.Location = new Point(1018, 334);
+            Text_Book_name.Margin = new Padding(6);
             Text_Book_name.Multline = false;
             Text_Book_name.Name = "Text_Book_name";
-            Text_Book_name.Padding = new Padding(7);
+            Text_Book_name.Padding = new Padding(15, 14, 15, 14);
             Text_Book_name.PasswordChar = false;
-            Text_Book_name.Size = new Size(312, 43);
+            Text_Book_name.Size = new Size(663, 83);
             Text_Book_name.TabIndex = 11;
             Text_Book_name.Texts = "";
             Text_Book_name.UnderlinedStyle = true;
@@ -214,19 +226,20 @@
             richTextBox3.BorderStyle = BorderStyle.None;
             richTextBox3.Font = new Font("Arial Narrow", 20F, FontStyle.Underline, GraphicsUnit.Point, 0);
             richTextBox3.ForeColor = Color.Black;
-            richTextBox3.Location = new Point(307, 19);
-            richTextBox3.Margin = new Padding(1);
+            richTextBox3.Location = new Point(652, 39);
+            richTextBox3.Margin = new Padding(2);
             richTextBox3.Name = "richTextBox3";
             richTextBox3.RightToLeft = RightToLeft.No;
-            richTextBox3.Size = new Size(177, 45);
+            richTextBox3.Size = new Size(402, 92);
             richTextBox3.TabIndex = 10;
             richTextBox3.Text = "Adding a book";
             // 
             // Add_book_button
             // 
-            Add_book_button.Location = new Point(307, 479);
+            Add_book_button.Location = new Point(652, 982);
+            Add_book_button.Margin = new Padding(6);
             Add_book_button.Name = "Add_book_button";
-            Add_book_button.Size = new Size(216, 50);
+            Add_book_button.Size = new Size(459, 102);
             Add_book_button.TabIndex = 9;
             Add_book_button.Text = "Add book";
             Add_book_button.UseVisualStyleBackColor = true;
@@ -240,12 +253,13 @@
             Text_ISBN.Bordersize = 2;
             Text_ISBN.Font = new Font("Segoe UI", 12F);
             Text_ISBN.ForeColor = Color.DimGray;
-            Text_ISBN.Location = new Point(479, 101);
+            Text_ISBN.Location = new Point(1018, 207);
+            Text_ISBN.Margin = new Padding(6);
             Text_ISBN.Multline = false;
             Text_ISBN.Name = "Text_ISBN";
-            Text_ISBN.Padding = new Padding(7);
+            Text_ISBN.Padding = new Padding(15, 14, 15, 14);
             Text_ISBN.PasswordChar = false;
-            Text_ISBN.Size = new Size(312, 43);
+            Text_ISBN.Size = new Size(663, 83);
             Text_ISBN.TabIndex = 8;
             Text_ISBN.Texts = "";
             Text_ISBN.UnderlinedStyle = true;
@@ -253,11 +267,12 @@
             // 
             // Insert_onebook
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel1);
+            Margin = new Padding(6);
             Name = "Insert_onebook";
-            Size = new Size(908, 556);
+            Size = new Size(1930, 1140);
             panel1.ResumeLayout(false);
             ResumeLayout(false);
         }

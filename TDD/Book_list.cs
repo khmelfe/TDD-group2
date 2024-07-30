@@ -99,8 +99,6 @@ namespace TDD
         {
             this.book_list=newlist;
         }
-
-        
         public void Bubble_Sort()
         {
 

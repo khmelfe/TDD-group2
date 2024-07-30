@@ -25,6 +25,7 @@ namespace TDD.Controls
         {
             InitializeComponent();
 
+            //loading Bar.
             dataGridView1.Show();
             backgroundWorker1.DoWork += new DoWorkEventHandler(backgroundWorker1_DoWork);
             backgroundWorker1.ProgressChanged += new ProgressChangedEventHandler(backgroundWorker1_ProgressChanged);
@@ -122,7 +123,7 @@ namespace TDD.Controls
                         listbook[i].BookCategory.ToString(), listbook[i].getIsBorrowed());
                 }));
             }
-            backgroundWorker1.ReportProgress(100);
+            backgroundWorker1.ReportProgress(100);// to make it full.
         }
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {

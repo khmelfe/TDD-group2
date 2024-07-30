@@ -67,25 +67,27 @@
             Background_panel.Controls.Add(Add_book_button);
             Background_panel.Dock = DockStyle.Fill;
             Background_panel.Location = new Point(0, 0);
-            Background_panel.Margin = new Padding(1);
+            Background_panel.Margin = new Padding(2, 2, 2, 2);
             Background_panel.Name = "Background_panel";
-            Background_panel.Size = new Size(1055, 725);
+            Background_panel.Size = new Size(2242, 1486);
             Background_panel.TabIndex = 0;
             // 
             // Main_page_button
             // 
-            Main_page_button.Location = new Point(29, 185);
+            Main_page_button.Location = new Point(62, 379);
+            Main_page_button.Margin = new Padding(6, 6, 6, 6);
             Main_page_button.Name = "Main_page_button";
-            Main_page_button.Size = new Size(111, 89);
+            Main_page_button.Size = new Size(236, 182);
             Main_page_button.TabIndex = 7;
             Main_page_button.Text = "Main_page";
             Main_page_button.UseVisualStyleBackColor = true;
             // 
             // List_books
             // 
-            List_books.Location = new Point(29, 500);
+            List_books.Location = new Point(62, 1025);
+            List_books.Margin = new Padding(6, 6, 6, 6);
             List_books.Name = "List_books";
-            List_books.Size = new Size(111, 89);
+            List_books.Size = new Size(236, 182);
             List_books.TabIndex = 6;
             List_books.Text = "View Books";
             List_books.UseVisualStyleBackColor = true;
@@ -97,44 +99,46 @@
             Main_page.Controls.Add(view_books1);
             Main_page.Controls.Add(insert_10k_books1);
             Main_page.Controls.Add(insert_onebook1);
-            Main_page.Location = new Point(146, 165);
+            Main_page.Location = new Point(310, 338);
+            Main_page.Margin = new Padding(6, 6, 6, 6);
             Main_page.Name = "Main_page";
-            Main_page.Size = new Size(909, 557);
+            Main_page.Size = new Size(1932, 1142);
             Main_page.TabIndex = 5;
             // 
             // view_books1
             // 
-            view_books1.Location = new Point(0, -1);
+            view_books1.Location = new Point(0, -2);
             view_books1.Margin = new Padding(0);
             view_books1.Name = "view_books1";
-            view_books1.Size = new Size(909, 557);
+            view_books1.Size = new Size(1932, 1142);
             view_books1.TabIndex = 2;
             view_books1.Load += view_books1_Load_1;
             // 
             // insert_10k_books1
             // 
-            insert_10k_books1.Location = new Point(-1, 0);
-            insert_10k_books1.Margin = new Padding(6);
+            insert_10k_books1.Location = new Point(-2, 0);
+            insert_10k_books1.Margin = new Padding(13, 12, 13, 12);
             insert_10k_books1.Name = "insert_10k_books1";
-            insert_10k_books1.Size = new Size(909, 557);
+            insert_10k_books1.Size = new Size(1932, 1142);
             insert_10k_books1.TabIndex = 1;
             insert_10k_books1.Visible = false;
             insert_10k_books1.Load += insert_10k_books1_Load;
             // 
             // insert_onebook1
             // 
-            insert_onebook1.Location = new Point(0, 0);
-            insert_onebook1.Margin = new Padding(6);
+            insert_onebook1.Location = new Point(-2, 0);
+            insert_onebook1.Margin = new Padding(13, 12, 13, 12);
             insert_onebook1.Name = "insert_onebook1";
-            insert_onebook1.Size = new Size(909, 557);
+            insert_onebook1.Size = new Size(1932, 1142);
             insert_onebook1.TabIndex = 0;
             insert_onebook1.Visible = false;
             // 
             // Onebook
             // 
-            Onebook.Location = new Point(29, 290);
+            Onebook.Location = new Point(62, 594);
+            Onebook.Margin = new Padding(6, 6, 6, 6);
             Onebook.Name = "Onebook";
-            Onebook.Size = new Size(111, 89);
+            Onebook.Size = new Size(236, 182);
             Onebook.TabIndex = 3;
             Onebook.Text = "Inset one book";
             Onebook.UseVisualStyleBackColor = true;
@@ -142,9 +146,10 @@
             // 
             // Books
             // 
-            Books.Location = new Point(29, 395);
+            Books.Location = new Point(62, 810);
+            Books.Margin = new Padding(6, 6, 6, 6);
             Books.Name = "Books";
-            Books.Size = new Size(111, 89);
+            Books.Size = new Size(236, 182);
             Books.TabIndex = 2;
             Books.Text = "Insert 10k books.";
             Books.UseVisualStyleBackColor = true;
@@ -156,11 +161,11 @@
             richTextBox2.BorderStyle = BorderStyle.None;
             richTextBox2.Font = new Font("Arial Narrow", 22.2F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point, 0);
             richTextBox2.ForeColor = Color.White;
-            richTextBox2.Location = new Point(367, 115);
-            richTextBox2.Margin = new Padding(1);
+            richTextBox2.Location = new Point(780, 236);
+            richTextBox2.Margin = new Padding(2, 2, 2, 2);
             richTextBox2.Name = "richTextBox2";
             richTextBox2.RightToLeft = RightToLeft.No;
-            richTextBox2.Size = new Size(320, 46);
+            richTextBox2.Size = new Size(680, 94);
             richTextBox2.TabIndex = 2;
             richTextBox2.Text = "Please choose wisely";
             richTextBox2.TextChanged += richTextBox2_TextChanged;
@@ -171,11 +176,11 @@
             richTextBox1.BorderStyle = BorderStyle.None;
             richTextBox1.Font = new Font("Arial Narrow", 25.8F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point, 0);
             richTextBox1.ForeColor = Color.White;
-            richTextBox1.Location = new Point(339, 47);
-            richTextBox1.Margin = new Padding(1);
+            richTextBox1.Location = new Point(720, 96);
+            richTextBox1.Margin = new Padding(2, 2, 2, 2);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.RightToLeft = RightToLeft.No;
-            richTextBox1.Size = new Size(395, 57);
+            richTextBox1.Size = new Size(839, 117);
             richTextBox1.TabIndex = 1;
             richTextBox1.Text = "Welcome to the library";
             // 
@@ -185,17 +190,18 @@
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Margin = new Padding(1);
+            pictureBox1.Margin = new Padding(2, 2, 2, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1055, 725);
+            pictureBox1.Size = new Size(2242, 1486);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // Add_book_button
             // 
-            Add_book_button.Location = new Point(-153, 56);
+            Add_book_button.Location = new Point(-325, 115);
+            Add_book_button.Margin = new Padding(6, 6, 6, 6);
             Add_book_button.Name = "Add_book_button";
-            Add_book_button.Size = new Size(907, 556);
+            Add_book_button.Size = new Size(1927, 1140);
             Add_book_button.TabIndex = 24;
             Add_book_button.Visible = false;
             // 
@@ -205,10 +211,10 @@
             Top_panel.Controls.Add(Minimize_button);
             Top_panel.Controls.Add(Exit_button);
             Top_panel.ForeColor = Color.CornflowerBlue;
-            Top_panel.Location = new Point(0, 1);
-            Top_panel.Margin = new Padding(1);
+            Top_panel.Location = new Point(0, 2);
+            Top_panel.Margin = new Padding(2, 2, 2, 2);
             Top_panel.Name = "Top_panel";
-            Top_panel.Size = new Size(1054, 44);
+            Top_panel.Size = new Size(2240, 90);
             Top_panel.TabIndex = 1;
             // 
             // Minimize_button
@@ -218,10 +224,10 @@
             Minimize_button.BackgroundImageLayout = ImageLayout.Stretch;
             Minimize_button.FlatStyle = FlatStyle.Popup;
             Minimize_button.ForeColor = Color.Transparent;
-            Minimize_button.Location = new Point(961, -1);
-            Minimize_button.Margin = new Padding(1);
+            Minimize_button.Location = new Point(2042, -2);
+            Minimize_button.Margin = new Padding(2, 2, 2, 2);
             Minimize_button.Name = "Minimize_button";
-            Minimize_button.Size = new Size(45, 45);
+            Minimize_button.Size = new Size(96, 92);
             Minimize_button.TabIndex = 2;
             Minimize_button.UseVisualStyleBackColor = false;
             Minimize_button.Click += Minimize_button_Click;
@@ -232,24 +238,24 @@
             Exit_button.BackgroundImage = (Image)resources.GetObject("Exit_button.BackgroundImage");
             Exit_button.BackgroundImageLayout = ImageLayout.Stretch;
             Exit_button.FlatStyle = FlatStyle.Popup;
-            Exit_button.Location = new Point(1008, -2);
-            Exit_button.Margin = new Padding(1);
+            Exit_button.Location = new Point(2142, -4);
+            Exit_button.Margin = new Padding(2, 2, 2, 2);
             Exit_button.Name = "Exit_button";
-            Exit_button.Size = new Size(45, 45);
+            Exit_button.Size = new Size(96, 92);
             Exit_button.TabIndex = 0;
             Exit_button.UseVisualStyleBackColor = false;
             Exit_button.Click += Exit_button_Click;
             // 
             // Library
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1055, 725);
+            ClientSize = new Size(2242, 1486);
             Controls.Add(Top_panel);
             Controls.Add(Background_panel);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "Library";
             Text = "Library";
             Background_panel.ResumeLayout(false);
