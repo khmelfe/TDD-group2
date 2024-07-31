@@ -117,7 +117,7 @@ namespace TDD.Controls
                 Invoke(new Action(() =>
                 {
                     //isbnSet.Add(isbn);
-                    dataGridView1.Rows.Add(listbook[i].getISBN(), listbook[i].getBook_name(), listbook[i].getBook_author(), listbook[i].getBook_release(),
+                    dataGridView1.Rows.Add(listbook[i].getISBN(), listbook[i].getBook_release(), listbook[i].getBook_name(), listbook[i].getBook_author()  ,
                         listbook[i].BookCategory.ToString(), listbook[i].getIsBorrowed());
                 }));
             }

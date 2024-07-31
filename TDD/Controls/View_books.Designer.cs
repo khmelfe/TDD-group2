@@ -31,12 +31,6 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             richTextBox4 = new RichTextBox();
             dataGridView1 = new DataGridView();
-            ISBN_Column = new DataGridViewTextBoxColumn();
-            Book_release_Column = new DataGridViewTextBoxColumn();
-            Book_name_Column = new DataGridViewTextBoxColumn();
-            Book_Author_Column = new DataGridViewTextBoxColumn();
-            Category_Column = new DataGridViewTextBoxColumn();
-            Isborrowed_colum = new DataGridViewTextBoxColumn();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
@@ -44,6 +38,12 @@
             label1 = new Label();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             button1 = new Button();
+            ISBN_Column = new DataGridViewTextBoxColumn();
+            Book_release_Column = new DataGridViewTextBoxColumn();
+            Book_name_Column = new DataGridViewTextBoxColumn();
+            Book_Author_Column = new DataGridViewTextBoxColumn();
+            Category_Column = new DataGridViewTextBoxColumn();
+            Isborrowed_colum = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -88,57 +88,6 @@
             dataGridView1.Size = new Size(762, 281);
             dataGridView1.TabIndex = 13;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // ISBN_Column
-            // 
-            ISBN_Column.HeaderText = "ISBN";
-            ISBN_Column.MinimumWidth = 12;
-            ISBN_Column.Name = "ISBN_Column";
-            ISBN_Column.ReadOnly = true;
-            ISBN_Column.SortMode = DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Book_release_Column
-            // 
-            Book_release_Column.HeaderText = "Book_release";
-            Book_release_Column.MinimumWidth = 12;
-            Book_release_Column.Name = "Book_release_Column";
-            Book_release_Column.ReadOnly = true;
-            Book_release_Column.SortMode = DataGridViewColumnSortMode.Programmatic;
-            // 
-            // Book_name_Column
-            // 
-            Book_name_Column.HeaderText = "Book_Name";
-            Book_name_Column.MinimumWidth = 12;
-            Book_name_Column.Name = "Book_name_Column";
-            Book_name_Column.ReadOnly = true;
-            Book_name_Column.SortMode = DataGridViewColumnSortMode.NotSortable;
-            Book_name_Column.Width = 200;
-            // 
-            // Book_Author_Column
-            // 
-            Book_Author_Column.HeaderText = "Book_Author";
-            Book_Author_Column.MinimumWidth = 12;
-            Book_Author_Column.Name = "Book_Author_Column";
-            Book_Author_Column.ReadOnly = true;
-            Book_Author_Column.SortMode = DataGridViewColumnSortMode.NotSortable;
-            Book_Author_Column.Width = 200;
-            // 
-            // Category_Column
-            // 
-            Category_Column.HeaderText = "Category";
-            Category_Column.MinimumWidth = 12;
-            Category_Column.Name = "Category_Column";
-            Category_Column.ReadOnly = true;
-            Category_Column.SortMode = DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Isborrowed_colum
-            // 
-            Isborrowed_colum.HeaderText = "Isborrowed";
-            Isborrowed_colum.MinimumWidth = 12;
-            Isborrowed_colum.Name = "Isborrowed_colum";
-            Isborrowed_colum.ReadOnly = true;
-            Isborrowed_colum.SortMode = DataGridViewColumnSortMode.Programmatic;
-            Isborrowed_colum.Width = 70;
             // 
             // button2
             // 
@@ -205,6 +154,57 @@
             button1.Text = "Sort";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            // 
+            // ISBN_Column
+            // 
+            ISBN_Column.HeaderText = "ISBN";
+            ISBN_Column.MinimumWidth = 12;
+            ISBN_Column.Name = "ISBN_Column";
+            ISBN_Column.ReadOnly = true;
+            ISBN_Column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Book_release_Column
+            // 
+            Book_release_Column.HeaderText = "Book_release";
+            Book_release_Column.MinimumWidth = 12;
+            Book_release_Column.Name = "Book_release_Column";
+            Book_release_Column.ReadOnly = true;
+            Book_release_Column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Book_name_Column
+            // 
+            Book_name_Column.HeaderText = "Book_Name";
+            Book_name_Column.MinimumWidth = 12;
+            Book_name_Column.Name = "Book_name_Column";
+            Book_name_Column.ReadOnly = true;
+            Book_name_Column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            Book_name_Column.Width = 200;
+            // 
+            // Book_Author_Column
+            // 
+            Book_Author_Column.HeaderText = "Book_Author";
+            Book_Author_Column.MinimumWidth = 12;
+            Book_Author_Column.Name = "Book_Author_Column";
+            Book_Author_Column.ReadOnly = true;
+            Book_Author_Column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            Book_Author_Column.Width = 200;
+            // 
+            // Category_Column
+            // 
+            Category_Column.HeaderText = "Category";
+            Category_Column.MinimumWidth = 12;
+            Category_Column.Name = "Category_Column";
+            Category_Column.ReadOnly = true;
+            Category_Column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Isborrowed_colum
+            // 
+            Isborrowed_colum.HeaderText = "Isborrowed";
+            Isborrowed_colum.MinimumWidth = 12;
+            Isborrowed_colum.Name = "Isborrowed_colum";
+            Isborrowed_colum.ReadOnly = true;
+            Isborrowed_colum.SortMode = DataGridViewColumnSortMode.NotSortable;
+            Isborrowed_colum.Width = 70;
             // 
             // View_books
             // 
