@@ -37,7 +37,7 @@
             textBox1.Dock = DockStyle.Fill;
             textBox1.Location = new Point(7, 7);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(236, 22);
+            textBox1.Size = new Size(236, 26);
             textBox1.TabIndex = 0;
             textBox1.TextChanged += textBox1_TextChanged;
             textBox1.Enter += textBox1_Enter;
@@ -48,7 +48,7 @@
             AutoScaleMode = AutoScaleMode.None;
             BackColor = SystemColors.Window;
             Controls.Add(textBox1);
-            Font = new Font("Segoe UI", 9.5F);
+            Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ForeColor = Color.DimGray;
             Name = "Custom_textbox";
             Padding = new Padding(7);

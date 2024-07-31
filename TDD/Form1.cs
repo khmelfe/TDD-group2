@@ -126,6 +126,16 @@ namespace TDD
             main_page1.Show();
 
         }
+
+        private void main_page1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void insert_onebook1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
